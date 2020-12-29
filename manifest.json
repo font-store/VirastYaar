@@ -1,0 +1,45 @@
+{
+    "manifest_version": 2,
+    "name": "VirastYaar",
+    "description": " VirastYaar is a semi-intelligent editing assistant for Persian texts. that is a add-in for Web browers, that performs Persian spell checking(soon), character standardization, Pinglish transliteration, punctuation correction and calendar conversion and ....",
+    "version": "0.0.1",
+    "icons": {
+        "64": "icons/icon.png",
+        "96": "icons/icon@2x.png"
+    },
+    "background": {
+        "scripts": [
+            "scripts/tools/browser-polyfill.js",
+            "scripts/backgrounds/main.js"
+        ]
+    },
+    "content_scripts": [{
+        "all_frames": true,
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "scripts/tools/browser-polyfill.js",
+            "scripts/tools/Virastyaar.js",
+            "scripts/contents/main.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "browser_action": {
+        "browser_style": true,
+        "default_icon": {
+            "64": "icons/icon.png",
+            "96": "icons/icon@2x.png"
+        },
+        "default_popup": "browserAction/index.html",
+        "default_title": "VirastYaar"
+    },
+    "options_ui": {
+        "page": "options/index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "*://*/*"
+    ]
+}

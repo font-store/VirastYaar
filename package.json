@@ -1,0 +1,15 @@
+{
+  "name": "virastyaar",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/font-store/VirastYaar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/font-store/VirastYaar/issues"
+  },
+  "homepage": "https://github.com/font-store/VirastYaar#readme"
+}
